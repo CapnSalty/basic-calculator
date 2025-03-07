@@ -1,7 +1,4 @@
-﻿using System.Numerics;
-using System.Security.Cryptography.X509Certificates;
-
-namespace basic_calculator
+﻿namespace basic_calculator
 {
     internal class Program
     {
@@ -39,11 +36,11 @@ namespace basic_calculator
 
                 while (!validInput2)
                 {
-                    if (!int.TryParse(input2, out num2))
+                    if (int.TryParse(input2, out num2))
                     {
                         Console.WriteLine("You have entered: " + num2);
                         validInput2 = true;
-                    }    
+                    }
                     else
                     {
                         Console.WriteLine("Invalid input. Try again.");
@@ -76,23 +73,21 @@ namespace basic_calculator
                         Console.WriteLine("Please input a valid number");
                         break;
                 }
-
-
-
             }
-        static int Add(int num1, int num2)
+
+            static int Add(int num1, int num2)
             {
                 return num1 + num2;
             }
-        static int Subtract(int num1, int num2)
+            static int Subtract(int num1, int num2)
             {
                 return num1 - num2;
             }
-        static int Multiply(int num1, int num2)
+            static int Multiply(int num1, int num2)
             {
                 return num1 * num2;
             }
-        static int Divide(int num1, int num2)
+            static int Divide(int num1, int num2)
             {
                 return num1 / num2;
             }
